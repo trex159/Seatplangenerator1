@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitzplangenerator</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="icon" href="Data/Icon.png" type="image/png">
+</head>
+<body>
+<header>
+    <h1>Sitzplangenerator</h1>
+    <button id="optimize-btn" class="primary-btn">Optimieren</button>
+    <button id="show-best-btn" class="secondary-btn">Bester Versuch anzeigen</button>
+    <button id="clear-storage-btn" class="danger-btn">Local Storage löschen</button>
+</header>
+
+    <main id="seating-area">
+        <div class="loading-screen" id="loading-screen" hidden>
+            <div class="loading-animation"></div>
+            <p id="loading-status">Optimierung läuft...</p>
+        </div>
+        <div id="seat-container">
+            <!-- Sitzplätze werden hier dynamisch generiert -->
+        </div>
+    </main>
+    <script src="drag.js"></script> <!-- Drag-and-Drop-Logik -->
+    <script src="js.js"></script> <!-- Hauptlogik -->
+</body>
+</html>

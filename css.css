@@ -1,0 +1,127 @@
+/* Allgemeiner Stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c2c7cc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #496f93;
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+p3 {
+    margin: 0;
+    font-size: 15px;
+    color: #0e022a;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn {
+    background-color: #0056a3;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #b5d1ee;
+    color: #0e0e0e;
+    transform: scale(1.05);
+}
+
+.secondary-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: #c6ffd3;
+    color: #0e0e0e;
+    transform: scale(1.05);
+}
+
+.danger-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.danger-btn:hover {
+    background-color: #f09aa2;
+    color: #0a0a00;
+    transform: scale(1.05);
+}
+
+/* Fortschrittsanzeige */
+#progress {
+    background-color: #f8f9fa;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Sitzplan */
+#seat-container {
+    position: relative;
+    width: 930px; /* Platz für Reihen mit Abstand */
+    height: 450px; /* 4 Reihen mit je 100px Abstand */
+    margin: 10px auto;
+    border: 2px solid #ff00d9;
+    background-color: #f7f0dd;
+    display: grid;
+    grid-template-rows: repeat(4, 120px);
+    grid-template-columns: 100px 100px 100px 180px 100px 100px 100px 100px; /* Abstand nach 4 Plätzen */
+    gap: 0px 1px; /* Spaltenabstand */
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Sitzplätze */
+.seat {
+    width: 80px;
+    height: 80px;
+    background-color: #d5f8ff;
+    border: 2px solid #05404c;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    cursor: grab;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.seat.dragging {
+    transform: scale(1.1);
+    opacity: 0.8;
+    background-color: #cce5ff;
+    cursor: grabbing;
+}
